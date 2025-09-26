@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My First Response</title>
+</head>
+<body bgcolor="grey">
+<h1>Hello ABHI</h1>
+<p>Department of CS</p>
+
+<form method="post" action="add">
+    {% csrf_token %}
+    Student Name:<input type="text" name="name"><br>
+    Roll No:<input type="text" name="rno"><br>
+    Address:<textarea name="address"></textarea><br>
+    Mobile N0:<input type="number" name="mbno"><br><br>
+    <input type="submit" value="insert student details"> <br>
+    {{msg1}}
+
+
+
+
+</form>
+<form action="display">
+
+    <h2>Details</h2>
+    <table>
+        <tr><th>Name</th><th>Roll</th><th>Address</th><th>Mobile No</th></tr>
+        {%}
+    </table>
+
+
+
+</form>
+
+
+
+
+
+</body>
+</html>
